@@ -1,6 +1,4 @@
 .btn {
-    // font-size: inherit;
-
     &--inline {
         display: inline-block;
         border: none;
@@ -28,6 +26,54 @@
         &:focus {
             outline: none;
             animation: pulsate 1s infinite;
+        }
+    }
+
+    &__large {
+        position: relative;
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        border-radius: 100px;
+        border: none;
+        overflow: hidden;
+        cursor: pointer;
+        background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+        color: var(--color-white);
+
+        &:hover {
+            background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+        }
+
+        &:focus {
+            outline: none;
+            animation: pulsate 1s infinite;
+        }
+
+        &--visible {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            padding: 2rem 7.5rem;
+            transition: all 0.2s;
+        }
+
+        &--invisible {
+            display: inline-block;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: -100%;
+            padding: 2rem 0;
+            transition: all 0.2s;
+        }
+
+        &:hover &--visible {
+            transform: translateY(100%);
+        }
+        &:hover &--invisible {
+            top: 0;
         }
     }
 }
