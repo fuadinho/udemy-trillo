@@ -3,10 +3,10 @@
     background-color: var(--color-grey-light-1);
     padding: 4.5rem;
     border-bottom: var(--line);
+    font-size: 1.4rem;
 }
 
 .description {
-    font-size: 1.4rem;
     flex: 0 0 60%;
     background-color: var(--line);
     margin-right: 4.5rem;
@@ -43,5 +43,8 @@
 
 .user-reviews {
     flex: 1;
-    background-color: yellowgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
