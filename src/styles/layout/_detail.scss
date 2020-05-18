@@ -4,6 +4,14 @@
     padding: 4.5rem;
     border-bottom: var(--line);
     font-size: 1.4rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
 }
 
 .description {
@@ -12,6 +20,16 @@
     margin-right: 4.5rem;
     box-shadow: var(--shadow-light);
     padding: 3rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
 }
 
 .recommend {
@@ -26,6 +44,7 @@
     }
 
     &__critics {
+        display: flex;
     }
 
     &__photo {
